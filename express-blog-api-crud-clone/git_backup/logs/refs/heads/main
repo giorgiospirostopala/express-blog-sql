@@ -1,0 +1,17 @@
+0000000000000000000000000000000000000000 fed9fdda1b78e4a3939410819dd5df3193f2dd97 giorgiospirostopala <gio.topala@gmail.com> 1739376655 +0100	commit (initial): add: create-folder&files-with-shell
+fed9fdda1b78e4a3939410819dd5df3193f2dd97 1980cbbf14f6bc98390399b478d2f1dc889cb718 giorgiospirostopala <gio.topala@gmail.com> 1739378842 +0100	commit: add: milestone-1.1
+1980cbbf14f6bc98390399b478d2f1dc889cb718 e8284cf2d4e685f0445aa7e9c39f96b57e2efd9a giorgiospirostopala <gio.topala@gmail.com> 1739382611 +0100	commit: add: milestone-1.2.1
+e8284cf2d4e685f0445aa7e9c39f96b57e2efd9a e4542492facd6812bdccd15e92c8d77a8f999b75 giorgiospirostopala <gio.topala@gmail.com> 1739383684 +0100	commit: add: milestone-1.2.2
+e4542492facd6812bdccd15e92c8d77a8f999b75 61e459aa8046618ddf0fb66b60d7fa6b1ca4894c giorgiospirostopala <gio.topala@gmail.com> 1739383836 +0100	commit: add: milestone-1.3
+61e459aa8046618ddf0fb66b60d7fa6b1ca4894c 80d8de5a6884f65ce8fe72882d4f77e897a0fb86 giorgiospirostopala <gio.topala@gmail.com> 1739384477 +0100	commit: add: milestone-1.4
+80d8de5a6884f65ce8fe72882d4f77e897a0fb86 e8ef47516387e49aa464c4eb3eae620e596b01d9 giorgiospirostopala <gio.topala@gmail.com> 1739384596 +0100	commit: add: milestone 2 (fatto contemporaneamente)
+e8ef47516387e49aa464c4eb3eae620e596b01d9 3e5ae75083c1d57d92fae82ccf956e65b6b1f678 giorgiospirostopala <gio.topala@gmail.com> 1739386559 +0100	commit: add: bonus-1 (not-case-sensitive)
+3e5ae75083c1d57d92fae82ccf956e65b6b1f678 948dfb09fef64e8d618bf7c6ea0a78cb41e7e798 giorgiospirostopala <gio.topala@gmail.com> 1739407939 +0100	commit: add: bonus-2 (in teoria)
+948dfb09fef64e8d618bf7c6ea0a78cb41e7e798 410202a262d054285ee9056b8fce0bc40472a2a0 giorgiospirostopala <gio.topala@gmail.com> 1739441520 +0100	commit: add: comments + static
+410202a262d054285ee9056b8fce0bc40472a2a0 06fd15deb683dad38c105f6eca0febf402712df9 giorgiospirostopala <gio.topala@gmail.com> 1739445202 +0100	commit: [ EX.2 ] add: milestone-1
+06fd15deb683dad38c105f6eca0febf402712df9 296be5d0c2448f8d5f0d49c88fe59bc92d13ab8c giorgiospirostopala <gio.topala@gmail.com> 1739445696 +0100	commit: add: milestone-2
+296be5d0c2448f8d5f0d49c88fe59bc92d13ab8c 6a0722b3ec40ddab5e0e86429b70bed01098d008 giorgiospirostopala <gio.topala@gmail.com> 1739446661 +0100	commit: add: milestone-3
+6a0722b3ec40ddab5e0e86429b70bed01098d008 03e96959a5853482af1327eee5840f149b08c940 giorgiospirostopala <gio.topala@gmail.com> 1739448748 +0100	commit: add: milestone-4 + bonus
+03e96959a5853482af1327eee5840f149b08c940 b64de8e78d946ec2412452705023545ce8e05879 giorgiospirostopala <gio.topala@gmail.com> 1739524920 +0100	commit: add: store-customizable-newPost [ F I N E ]
+b64de8e78d946ec2412452705023545ce8e05879 1d62af57577b783f9564bd8ae63f709ef83446d8 giorgiospirostopala <gio.topala@gmail.com> 1739530448 +0100	commit: [ EX.3 ] add: done [ FINE ]
+1d62af57577b783f9564bd8ae63f709ef83446d8 7bce2356ecaa9bcf9a14bc514ac6bf00e14fb0b3 giorgiospirostopala <gio.topala@gmail.com> 1739544042 +0100	commit: add: app.listen() in fondo a tutto!
