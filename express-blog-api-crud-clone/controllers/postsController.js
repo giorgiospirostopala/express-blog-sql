@@ -32,21 +32,49 @@ function index(req, res) {
 
 function show(req, res) {
 
-    const id = parseInt(req.params.id);
-    const post = posts.find(post => post.id === id);
+    // const id = parseInt(req.params.id);
+    // const post = posts.find(post => post.id === id);
 
-    // contratto ( MEGLIO USARE VERSIONE ESTESA ):
-    // const post = posts.find(post => post.id === parseInt(req.params.id));
+    // // contratto ( MEGLIO USARE VERSIONE ESTESA ):
+    // // const post = posts.find(post => post.id === parseInt(req.params.id));
 
-    // in teoria questo fa già quanto richiesto dal bonus (?)
-    if (!post) {
-        res.status(404);
-        return res.json({ status: 404, error: "Not Found", message: "Id non associato a nessun post" });
-    }
+    // // in teoria questo fa già quanto richiesto dal bonus (?)
+    // if (!post) {
+    //     res.status(404);
+    //     return res.json({ status: 404, error: "Not Found", message: "Id non associato a nessun post" });
+    // }
 
-    res.json(post);
+    // res.json(post);
 
     // res.send(`Dettaglio del post: ${req.params.id}`);
+
+    const { id } = req.params;
+    const postsSql = 'SELECT * FROM posts WHERE id = ?';
+    const tagsSql = `SELECT * FROM tags JOIN post_tag ON tags.id = post_tag.tag_id WHERE post_tag.post_id = ?`;
+
+    connection.query(postsSql, [id], (err, postsResults) => {
+        if (err) return res.status(500).json({
+            error: 'Database Error SHOW'
+        });
+
+        if (postsResults.length === 0) return res.status(404).json({
+            error: 'Not Found'
+        });
+
+        const post = postsResults[0];
+
+        connection.query(tagsSql, [id], (err, tagsResults) => {
+            if (err) return res.status(500).json({ error: 'Database query failed' });
+
+            post.tags = tagsResults;
+
+            res.json(post);
+        });
+
+        // res.json(postsResults[0]);
+    });
+
+
 
 }
 
