@@ -3,17 +3,29 @@
 // per prima cosa importiamo i dati, quindi posts[]
 const posts = require("../data/postsData");
 
+const connection = require("../data/db.js")
+
 function index(req, res) {
 
-    let filteredPosts = posts;
+    // let filteredPosts = posts;
 
-    if (req.query.tag) {
-        filteredPosts = posts.filter(post => post.tags.includes(req.query.tag));
-    }
+    // if (req.query.tag) {
+    //     filteredPosts = posts.filter(post => post.tags.includes(req.query.tag));
+    // }
 
-    res.json(filteredPosts);
+    // res.json(filteredPosts);
 
     // res.send(`Lista dei post`);
+
+    const sql = 'SELECT * FROM posts';
+
+    connection.query(sql, (err, results) => {
+        if (err) return res.status(500).json({
+            error: 'Error INDEX'
+        });
+
+        res.json(results);
+    });
 
 }
 
@@ -103,22 +115,34 @@ function update(req, res) { // "modify" invece la fa parziale
 
 function destroy(req, res) {
 
-    const id = parseInt(req.params.id);
-    const post = posts.find(post => post.id === id);
+    // const id = parseInt(req.params.id);
+    // const post = posts.find(post => post.id === id);
 
-    // in teoria questo fa già quanto richiesto dal bonus (?)
-    if (!post) {
-        res.status(404);
-        return res.json({ status: 404, error: "Not Found", message: "Id non associato a nessun post" });
-    }
+    // // in teoria questo fa già quanto richiesto dal bonus (?)
+    // if (!post) {
+    //     res.status(404);
+    //     return res.json({ status: 404, error: "Not Found", message: "Id non associato a nessun post" });
+    // }
 
-    posts.splice(posts.indexOf(post), 1);
+    // posts.splice(posts.indexOf(post), 1);
 
-    console.log(posts); // per vedere il nuovo array
+    // console.log(posts); // per vedere il nuovo array
 
-    res.sendStatus(204);
+    // res.sendStatus(204);
 
     // res.send(`Eliminazione del post: ${req.params.id}`);
+
+    const { id } = req.params;
+
+    const sql = 'DELETE FROM posts WHERE id = ?';
+
+    connection.query(sql, [id], (err) => {
+        if (err) return res.status(500).json({
+            error: 'Database error query Destroy'
+        });
+
+        res.sendStatus(204);
+    });
 
 }
 
