@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/giorgiospirostopala/express-blog-api-crud#readme",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "mysql2": "^3.13.0"
   }
 }
